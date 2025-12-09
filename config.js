@@ -1,4 +1,3 @@
-
 module.exports = {
   // Bot Configuration
   token: process.env.DISCORD_BOT_TOKEN || '',
@@ -14,13 +13,19 @@ module.exports = {
   // Lavalink Configuration
   lavalink: {
     nodes: [{
-      name: 'main',
-      host: 'lava-v4.ajieblogs.eu.org',
-      port: 80,
-      password: 'https://dsc.gg/ajidevserver',
+      name: 'Main Node',
+      host: 'lavalink.jirayu.net',
+      port: 13592,
+      password: 'youshallnotpass',
       secure: false,
     }],
     defaultSearchEngine: 'youtube'
+  },
+
+  // Spotify credentials for search/login (optional)
+  spotify: {
+    clientId: process.env.SPOTIFY_CLIENT_ID || 'a568b55af1d940aca52ea8fe02f0d93b',
+    clientSecret: process.env.SPOTIFY_CLIENT_SECRET || 'e8199f4024fe49c5b22ea9a3dd0c4789'
   },
 
   // Emojis
@@ -61,7 +66,7 @@ module.exports = {
 
   // Express Server
   express: {
-    port: process.env.PORT || 5000,
+    port: process.env.PORT || 13592,
     host: '0.0.0.0'
   }
 };
